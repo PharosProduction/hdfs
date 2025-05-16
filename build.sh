@@ -2,8 +2,8 @@
 
 ORGANIZATION="dmytronasyrov"
 DOCKER_REPO="hdfs"
-DATE="13-05-25"
-VERSION="1"
+DATE="16-05-25"
+VERSION="2"
 
 VCS_URL="https://github.com/PharosProduction/hdfs"
 VCS_BRANCH="hdfs/master"

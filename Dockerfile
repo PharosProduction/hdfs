@@ -8,7 +8,14 @@ ENV HADOOP_CONF_DIR /etc/hadoop
 ENV PATH $PATH:$HADOOP_HOME/bin
 ENV LD_LIBRARY_PATH $HADOOP_HOME/lib/native:$LD_LIBRARY_PATH
 
-RUN apt-get update && apt-get install --no-install-recommends -y openssh-client openssh-server less
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    openssh-client \
+    openssh-server \
+    less \
+    netcat-openbsd \
+    jq \
+    ssh \
+    dnsutils
 
 RUN wget https://dlcdn.apache.org/hadoop/common/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz || wget http://archive.apache.org/dist/hadoop/common/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz && \
     tar -xzf hadoop-${HADOOP_VERSION}.tar.gz && \
