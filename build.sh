@@ -2,8 +2,8 @@
 
 ORGANIZATION="dmytronasyrov"
 DOCKER_REPO="hdfs"
-DATE="16-05-25"
-VERSION="2"
+DATE="17-05-25"
+VERSION="6"
 
 VCS_URL="https://github.com/PharosProduction/hdfs"
 VCS_BRANCH="hdfs/master"
@@ -19,7 +19,7 @@ docker buildx build \
   --build-arg vcs_url=$VCS_URL \
   --build-arg vcs_branch=$VCS_BRANCH \
   --build-arg vcs_ref=$VCS_REF \
-  --platform linux/arm64,linux/amd64 \
+  --platform linux/arm64 \
   -f Dockerfile \
   --progress plain \
   --push \
