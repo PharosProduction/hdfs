@@ -75,7 +75,7 @@ ENV JAVA_TOOL_OPTIONS="-Djava.library.path=$HADOOP_COMMON_LIB_NATIVE_DIR"
 
 # 1) install minimal runtime dependencies
 RUN apt-get update && apt-get install --no-install-recommends -y \
-    openssh-client openssh-server \
+    openssh-client openssh-server netcat-openbsd \
  && rm -rf /var/lib/apt/lists/*
 
 # 2) copy Hadoop dist and async-profiler from builder
